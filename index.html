@@ -1,0 +1,176 @@
+<h1>Course Registration Form</h1>
+<style >
+    body{
+        background: rgb(63,94,251);
+        background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(241,201,209,0.9697128851540616) 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        flex-direction: column;
+    }
+    h1{
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    fieldset{
+        width:500px;
+        
+        border:2px solid black;
+        border-radius:25px;
+    }
+    input:required{
+        border :3px solid rgb(165, 97, 42);
+    }
+    /*input:optional{
+        border:5px dashed black;
+    }*/
+    input[readonly]{
+        background-color:aquamarine;
+    }
+    select{
+        background-color: cyan;
+        border-radius:10px;
+        width:200px;
+        cursor:pointer;
+    }
+    input[type="radio"]:checked{
+        height:20px;
+        width:40px;
+    }
+    input[type="radio"]:checked+label{
+        color:black;
+        font-size:20px;
+        
+    }
+    p{
+        display:none;
+    }
+    input:hover+p{
+        display:inline;
+        color:black;
+        background-color:aqua;
+
+    }
+    input:focus{
+        background-color: coral;
+        color: black;
+    }
+    img{
+        display:none;
+
+    }
+    input[type="Email"]:focus:valid~img.valid{
+        display:inline;
+        height:15px;
+        width:15px;
+    }
+    input[type="Email"]:focus:invalid~img.invalid{
+        display:inline;
+        height:15px;
+        width:15px;
+    }
+    input[name="age"]:focus:in-range:valid~img.valid{
+        display:inline;
+        height:15px;
+        width:15px;
+    }
+    input[name="age"]:focus:out-of-range:invalid~img.invalid{
+        display:inline;
+        height:15px;
+        width:15px;
+    }
+
+</style>
+
+
+<form action="">
+    <fieldset>
+        <legend >Personal Details</legend>
+<table >
+    <tr>
+        <td><label for = "name">Name</label></td>
+        <td><input type ="text" name="FN"placeholder="Ex:Lekhana" required><p> Enter Your Name</p></td>
+    </tr>
+    <tr>
+        <td><label for="">Surname</label></td>
+        <td><input type = "text" placeholder="Ex: Gowda"><p>Enter Your Surname</p></td>
+    </tr>
+    <tr>
+        <td><label for="">Mobile Number</label></td>
+        <td><input type="tel"placeholder ="Ex:1234567890" required><p>Enter Your Mobile Number</p></td>
+    </tr>
+    <tr>
+        <td><label for="">Email</label></td>
+        <td><input type="email" placeholder ="Ex: 123@gmail.com" required><p>Enter Your Email Id</p><img src="delete (1).png" class="invalid"><img src="check.png" class="valid"></td>
+    </tr>
+    <tr>
+        <td><label for="">Password</label></td>
+        <td><input type ="password" required><p>Include 1 UpperCase,<br>1 LowerCase,<br>1 Special Ch</p></td>
+    </tr>
+    <tr>
+        <td><label for="">Confirm Password</label></td>
+        <td><input type="password" required><br/></td>
+    </tr>
+    <tr>
+        <td><label for="">DOB</label></td>
+        <td><input type="date" ><br/></td>
+    </tr>
+    <tr>
+        <td><lable>Age</lable></td>
+        <td><input type="number" name="age" required min="18" max="100"> <img class="valid" src="check.png"><img class="invalid" src="delete (1).png"></td>
+    </tr>
+    <tr>
+        <td><label for="">Gender</label></td>
+        <td><input type="radio"name="gender" value="M"><label>Male</label>
+            <input type="radio"name ="gender" value ="F"><label>Female</label>
+            <input type="radio" name ="gender" value="C"><label>Others</label><br /></td>
+    </tr>
+
+    <tr>
+        <td><label for="">Select</label></td>
+        <td><select>
+            <option value="">INDIA</option>
+            <option value="">USA</option>
+            <option value="">UK</option>
+            <option value="">AUSTRALIA</option>
+            <option value="">ITALY</option>
+    
+        </select><br/></td>
+    </tr>
+    <tr>
+        <td><lable for="">Upload Image</lable></td>
+        <td><input type ="file"/><br></td>
+    </tr>
+    <tr><td><input type ="reset"></td></tr>
+</table>
+</fieldset>
+<fieldset>
+    <legend>Course Details</legend>
+    <legend>Select Course</legend>
+    <select name="Course">
+        <option value ="PFS">Python Full Stack Development</option>
+        <option value ="JFS">JAVA Full Stack Development</option>
+        <option value ="MFS">Mern Full Stack Development</option>
+        
+    </select><br>
+    <label>Delivery Mode</label>
+    <input type ="radio" name="mode" value ="ON" >ONLINE
+    <input type ="radio" name="mode" value ="OFF" >OFFLINE <br>
+    <label> Institute Name: </label>
+    <input type="text" value ="TAP ACADEMY" readonly><br>
+    <label>Comments: </label><br>
+    <textarea rows ="4" cols ="40"></textarea>
+</fieldset>
+<input type = "submit" name=""id=""/>
+
+
+
+
+    
+    
+    
+    
+    
+   
+</form>
